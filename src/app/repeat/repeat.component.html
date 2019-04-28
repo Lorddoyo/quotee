@@ -1,8 +1,10 @@
 <h1>Thy Quotes</h1>
+<hr>
 <ul>
-  <div *ngFor='let repeat of repeats'>
+  <div *ngFor='let repeat of repeats;let i = index'>
     <li>{{repeat.name}}</li>
-    <app-repeat-details [repeat]='repeat'></app-repeat-details>
+    <button (click)='toogleDetails(i)'>Hide Details</button>
+    <app-repeat-details *ngIf="repeat.showDescription" [repeat]='repeat'></app-repeat-details>
 
   </div>
 </ul>
