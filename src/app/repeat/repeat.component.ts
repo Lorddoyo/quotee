@@ -9,8 +9,8 @@ import {Repeat} from '../repeat'
 export class RepeatComponent implements OnInit {
 
   repeats = [
-    new Repeat(1,'The greatest trick the Devil ever pulled was convincing the world he didn’t exist','By C.S.Lewis','Lorddoyo', new Date(2019,4,28)),
-    new Repeat(2,'Love Yours','By Jermaine Lamarr Cole','Lorddoyo', new Date(2019,4,28)),
+    new Repeat(1,'By C.S.Lewis','The greatest trick the Devil ever pulled was convincing the world he didn’t exist','Lorddoyo', new Date(2019,4,28)),
+    new Repeat(2,'By Jermaine Lamarr Cole','Love Yours','Lorddoyo', new Date(2019,4,28)),
   ]
 
 
