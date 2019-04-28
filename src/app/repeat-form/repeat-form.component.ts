@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Repeat} from '../repeat';
 
 @Component({
@@ -8,6 +8,11 @@ import {Repeat} from '../repeat';
 })
 export class RepeatFormComponent implements OnInit {
   newRepeat=new Repeat(0,"","","",new Date());
+  @Output() addRepeat=new EventEmitter<Repeat>();
+
+  submitRepeat(){
+    this.addRepeat.emit(this.newRepeat)
+  }
 
   constructor() { }
 

@@ -9,8 +9,8 @@ import {Repeat} from '../repeat'
 export class RepeatComponent implements OnInit {
 
   repeats = [
-    new Repeat(1,'I am who I am','Lorddoyo','By The One True Living God',new Date(2019,4,28)),
-    new Repeat(2,'Love Yours','Adano','By Jermaine Lamarr Cole',new Date(2019,4,28)),
+    new Repeat(1,'I am who I am','By The One True Living God','Lorddoyo', new Date(2019,4,28)),
+    new Repeat(2,'Love Yours','By Jermaine Lamarr Cole','Lorddoyo', new Date(2019,4,28)),
   ]
 
 
@@ -24,6 +24,16 @@ export class RepeatComponent implements OnInit {
        }
     }
   }
+
+  addNewRepeat(repeat){
+    let repeatLength = this.repeats.length;
+    repeat.id=repeatLength+1;
+    repeat.author= repeat.author;
+    repeat.name= repeat.name
+    repeat.date = new Date(repeat.date)
+    this.repeats.push(repeat)
+  }
+
 toogleDetails(index){
   this.repeats[index].showDescription = !this.repeats[index].showDescription;
 }
