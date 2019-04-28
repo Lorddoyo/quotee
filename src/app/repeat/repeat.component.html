@@ -2,7 +2,7 @@
 <hr>
 <ul>
   <div *ngFor='let repeat of repeats;let i = index'>
-    <li appHighlight>{{repeat.name}}</li>
+    <li id="{{i}}" appHighlight>{{repeat.name}} written on {{repeat.date|date}}</li>
     <button (click)='toogleDetails(i)'>Hide & Show Details</button>
     <app-repeat-details *ngIf="repeat.showDescription" [repeat]='repeat'(isComplete)='completeRepeat($event,i)'></app-repeat-details>
 
