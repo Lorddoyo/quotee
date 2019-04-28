@@ -12,6 +12,12 @@ export class RepeatComponent implements OnInit {
     new Repeat(1,'I am who I am','By The One True Living God'),
     new Repeat(2,'Love Yours','By Jermaine Lamarr Cole'),
   ]
+
+  completeRepeat(isComplete,index){
+    if (isComplete) {
+      this.repeats.splice(index,1);
+    }
+  }
   toogleDetails(index){
     this.repeats[index].showDescription = !this.repeats[index].showDescription;
   }
