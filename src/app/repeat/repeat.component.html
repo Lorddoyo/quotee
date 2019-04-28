@@ -1,10 +1,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Gugi|Inconsolata|Indie+Flower|Open+Sans+Condensed:300" rel="stylesheet">
+
+<body>
+
+
 <div class="container">
   <div class="jumbotron">
-  <div class="row">
-    <app-repeat-form (addRepeat)="addNewRepeat($event)"></app-repeat-form>
 
-  </div>
 
 
 
@@ -15,9 +17,15 @@
 <hr>
 
   <div *ngFor='let repeat of repeats;let i = index'>
-    <h4 id="{{i}}" appHighlight>{{repeat.name}} written on {{repeat.date|date}}</h4>
+    <h4 id="{{i}}" appHighlight>{{repeat.description}} <br> time passed since writting {{repeat.date|dateCounter}}</h4>
     <button (click)='toogleDetails(i)'>Hide & ShowDetails</button>
     <app-repeat-details *ngIf="repeat.showDescription" [repeat]='repeat'(isComplete)='deleteRepeat($event,i)'></app-repeat-details>
+
+  </div>
+  <hr>
+  <h3>If You Want To Add A Quote</h3>
+  <div class="row">
+    <app-repeat-form (addRepeat)="addNewRepeat($event)"></app-repeat-form>
 
   </div>
 
@@ -25,3 +33,4 @@
 
 </div>
   </div>
+  </body>

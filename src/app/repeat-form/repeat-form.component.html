@@ -2,7 +2,7 @@
   <div class="row">
     <form (ngSubmit)='submitRepeat()' #repeatForm='ngForm'>
       <div class="form-group">
-        <label for="name">Writer's Name</label>
+        <label for="name">Author</label>
         <input type="text"  class="form-control" id="name" [(ngModel)]="newRepeat.name" name="name" #name="ngModel" required>
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           <p>Name is Required</p>
@@ -11,7 +11,7 @@
 
       </div>
       <div class="form-group">
-        <label for="author">Author</label>
+        <label for="author">Writer's Name</label>
         <input type="text"  class="form-control" id="author" [(ngModel)]="newRepeat.author" name="name" #name="ngModel" required>
 
       </div>
