@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  repeat: string[];
-
-  constructor(){
-    this.repeat = ["I am who I am","Love Yours"];
-  }
+  repeats = [
+    new Repeat(1,'I am who I am'),
+    new Repeat(2,'Love Yours'),
+  ]
 }
