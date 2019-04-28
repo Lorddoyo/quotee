@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Repeat} from '../repeat'
 
 @Component({
@@ -9,6 +9,11 @@ import {Repeat} from '../repeat'
 export class RepeatDetailsComponent implements OnInit {
 
   @Input() repeat:Repeat;
+  @Output() isComplete=new EventEmitter<boolean>();
+
+  repeatComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit() {

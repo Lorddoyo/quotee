@@ -10,8 +10,11 @@ export class RepeatComponent implements OnInit {
 
   repeats = [
     new Repeat(1,'I am who I am','By The One True Living God'),
-    new Repeat(2,'Love Yours','Jermaine Lamarr Cole'),
+    new Repeat(2,'Love Yours','By Jermaine Lamarr Cole'),
   ]
+  toogleDetails(index){
+    this.repeats[index].showDescription = !this.repeats[index].showDescription;
+  }
 
   constructor() { }
 

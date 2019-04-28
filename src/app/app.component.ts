@@ -9,6 +9,6 @@ import {Repeat} from './repeat'
 export class AppComponent {
   repeats = [
     new Repeat(1,'I am who I am','By The One True Living God'),
-    new Repeat(2,'Love Yours','Jermaine Lamarr Cole'),
+    new Repeat(2,'Love Yours','By Jermaine Lamarr Cole'),
   ]
 }
