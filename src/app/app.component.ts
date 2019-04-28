@@ -8,7 +8,8 @@ import {Repeat} from './repeat'
 })
 export class AppComponent {
   repeats = [
-    new Repeat(1,'I am who I am','By The One True Living God',new Date(2019,4,28)),
-    new Repeat(2,'Love Yours','By Jermaine Lamarr Cole',new Date(2019,4,28)),
+    new Repeat(1,'I am who I am','Lorddoyo','By The One True Living God',new Date(2019,4,28)),
+    new Repeat(2,'Love Yours','Adano','By Jermaine Lamarr Cole',new Date(2019,4,28)),
   ]
+
 }
