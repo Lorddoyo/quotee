@@ -13,18 +13,23 @@ export class RepeatComponent implements OnInit {
     new Repeat(2,'Love Yours','By Jermaine Lamarr Cole',new Date(2019,4,28)),
   ]
 
-  completeRepeat(isComplete,index){
-    if (isComplete) {
-      this.repeats.splice(index,1);
+
+  deleteRepeat(isComplete,index){
+    if (isComplete){
+        let toDelete=confirm(`Are You sure you want to delete ${this.repeats[index].name}`)
+
+
+       if (toDelete) {
+          this.repeats.splice(index,1);
+       }
     }
   }
-  toogleDetails(index){
-    this.repeats[index].showDescription = !this.repeats[index].showDescription;
-  }
+toogleDetails(index){
+  this.repeats[index].showDescription = !this.repeats[index].showDescription;
+}
 
-  constructor() { }
+constructor() { }
 
-  ngOnInit() {
-  }
-
+ngOnInit() {
+}
 }

@@ -11,7 +11,7 @@ export class RepeatDetailsComponent implements OnInit {
   @Input() repeat:Repeat;
   @Output() isComplete=new EventEmitter<boolean>();
 
-  repeatComplete(complete:boolean){
+  repeatDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
   constructor() { }

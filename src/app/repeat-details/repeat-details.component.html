@@ -1,4 +1,5 @@
 <p>
   {{repeat.description}}
 </p>
-<button (click) = 'repeatComplete(true)'>Complete</button>
+<p>This is the amount of time that has past since posting the quote{{repeat.dateCounter|date}}</p>
+<button (click) = 'repeatDelete(true)'>Delete Quote</button>
