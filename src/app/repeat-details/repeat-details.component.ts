@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Repeat} from '../repeat'
 
 @Component({
   selector: 'app-repeat-details',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepeatDetailsComponent implements OnInit {
 
+  @Input() repeat:Repeat;
   constructor() { }
 
   ngOnInit() {

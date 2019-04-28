@@ -9,8 +9,8 @@ import {Repeat} from '../repeat'
 export class RepeatComponent implements OnInit {
 
   repeats = [
-    new Repeat(1,'I am who I am'),
-    new Repeat(2,'Love Yours'),
+    new Repeat(1,'I am who I am','By The One True Living God'),
+    new Repeat(2,'Love Yours','Jermaine Lamarr Cole'),
   ]
 
   constructor() { }

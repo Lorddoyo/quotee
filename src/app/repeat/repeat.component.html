@@ -1,4 +1,8 @@
 <h1>Thy Quotes</h1>
 <ul>
-  <li *ngFor='let repeat of repeats'>{{repeat.name}}</li>
+  <div *ngFor='let repeat of repeats'>
+    <li>{{repeat.name}}</li>
+    <app-repeat-details [repeat]='repeat'></app-repeat-details>
+
+  </div>
 </ul>
