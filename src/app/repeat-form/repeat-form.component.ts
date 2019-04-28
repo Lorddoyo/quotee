@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Repeat} from '../repeat';
 
 @Component({
   selector: 'app-repeat-form',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repeat-form.component.css']
 })
 export class RepeatFormComponent implements OnInit {
-  newReapet=new Reapet(0,"","",new Date());
+  newRepeat=new Repeat(0,"","",new Date());
 
   constructor() { }
 
