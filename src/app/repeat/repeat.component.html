@@ -17,7 +17,7 @@
 <hr>
 
   <div *ngFor='let repeat of repeats;let i = index'>
-    <h4 id="{{i}}" appHighlight>{{repeat.description}} <br> time passed since writting {{repeat.date|dateCounter}}</h4>
+    <h4 id="{{i}}" appHighlight>{{repeat.description}} <br>{{repeat.name}} {{repeat.author}} time passed since writting {{repeat.date|dateCounter}}</h4>
     <button (click)='toogleDetails(i)'>Hide & ShowDetails</button>
     <app-repeat-details *ngIf="repeat.showDescription" [repeat]='repeat'(isComplete)='deleteRepeat($event,i)'></app-repeat-details>
 
