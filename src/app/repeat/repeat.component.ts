@@ -11,6 +11,7 @@ export class RepeatComponent implements OnInit {
   repeats = [
     new Repeat(1,'By C.S.Lewis','The greatest trick the Devil ever pulled was convincing the world he didn’t exist','Lorddoyo',0,0, new Date(2019,4,28)),
     new Repeat(2,'By Jermaine Lamarr Cole','Love Yours','Lorddoyo', 0,0,new Date(2019,4,28)),
+    new Repeat(3,'By Zenas Muli','Kama unapenda watoto wa shule ambia bibi yako avae school uniform','Lorddoyo',0,0,new Date(2019,4,28))
   ]
 
 
