@@ -9,9 +9,10 @@ import {Repeat} from '../repeat'
 export class RepeatComponent implements OnInit {
 
   repeats = [
-    new Repeat(1,'By C.S.Lewis','The greatest trick the Devil ever pulled was convincing the world he didn’t exist','Lorddoyo', new Date(2019,4,28)),
-    new Repeat(2,'By Jermaine Lamarr Cole','Love Yours','Lorddoyo', new Date(2019,4,28)),
+    new Repeat(1,'By C.S.Lewis','The greatest trick the Devil ever pulled was convincing the world he didn’t exist','Lorddoyo',0,0, new Date(2019,4,28)),
+    new Repeat(2,'By Jermaine Lamarr Cole','Love Yours','Lorddoyo', 0,0,new Date(2019,4,28)),
   ]
+
 
 
   deleteRepeat(isComplete,index){
@@ -33,6 +34,7 @@ export class RepeatComponent implements OnInit {
     repeat.date = new Date(repeat.date)
     this.repeats.push(repeat)
   }
+
 
 toogleDetails(index){
   this.repeats[index].showDescription = !this.repeats[index].showDescription;

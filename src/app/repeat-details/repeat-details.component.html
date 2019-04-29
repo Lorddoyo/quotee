@@ -1,6 +1,14 @@
 <p>
-  {{repeat.description}}
+  {{repeat.name}}<br>{{repeat.author}}
 </p>
+<div class="">
+<p>like: {{repeat.like}}</p>
+<p>like: {{repeat.dislike}}</p>
+<button (click)='repeatLike(repeat)' type="button">Like</button>
+<button (click)='repeatDislike(repeat)' type="button">Dislike</button>
+
+</div>
+
 
 
 <button class="btn btn-danger"(click) = 'repeatDelete(true)'>Delete Quote</button>

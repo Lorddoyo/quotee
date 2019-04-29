@@ -7,7 +7,7 @@ import {Repeat} from '../repeat';
   styleUrls: ['./repeat-form.component.css']
 })
 export class RepeatFormComponent implements OnInit {
-  newRepeat=new Repeat(0,"","","",new Date());
+  newRepeat=new Repeat(0,"","","",0,0,new Date());
   @Output() addRepeat=new EventEmitter<Repeat>();
 
   submitRepeat(){
